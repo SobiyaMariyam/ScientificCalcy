@@ -1,3 +1,6 @@
+// A code for scientific calculation having different operation
+//Sobiya Vhora
+
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -99,6 +102,7 @@ public class ScientificCalculator extends JFrame {
 		textField.setBorder((Border) new BevelBorder(BevelBorder.RAISED));
 		// all computer button
 		
+		// sin button
 		btnsin = new JButton("sin");
 		btnsin.setForeground(new Color(255, 255, 255));
 		btnsin.setFont(new Font("Tahoma", Font.BOLD, 16));
@@ -115,6 +119,7 @@ public class ScientificCalculator extends JFrame {
 				}
 				else {
 					first = Double.valueOf(textField.getText());
+					first = Math.toRadians(first);
 					res = Math.sin(first);
 					textField.setText(String.valueOf(res));
 					Opt ="sin";
@@ -123,7 +128,9 @@ public class ScientificCalculator extends JFrame {
 		});
 		btnsin.setBounds(232, 148, 68, 36);
 		contentPane.add(btnsin);
+		// complete Sin button
 		
+		// cos button 
 		btncos = new JButton("cos");
 		btncos.setBorder((Border) new BevelBorder(BevelBorder.RAISED));
 		btncos.setForeground(new Color(255, 255, 255));
@@ -140,6 +147,7 @@ public class ScientificCalculator extends JFrame {
 				}
 				else {
 				first = Double.valueOf(textField.getText());
+				first = Math.toRadians(first);
 				res = Math.cos(first);
 				textField.setText(String.valueOf(res));
 				 Opt ="cos";
@@ -149,6 +157,10 @@ public class ScientificCalculator extends JFrame {
 		btncos.setBounds(310, 148, 61, 36);
 		contentPane.add(btncos);
 		
+		
+		// completed cos button
+		
+		// tan button
 		btntan = new JButton("tan");
 		btntan.setBorder((Border) new BevelBorder(BevelBorder.RAISED));
 		btntan.setForeground(new Color(255, 255, 255));
@@ -165,6 +177,7 @@ public class ScientificCalculator extends JFrame {
 				}
 				else {
 					first = Double.valueOf(textField.getText());
+					first = Math.toRadians(first);
 					res = Math.tan(first);
 					textField.setText(String.valueOf(res));
 					Opt ="tan";
@@ -174,6 +187,9 @@ public class ScientificCalculator extends JFrame {
 		btntan.setBounds(381, 148, 61, 36);
 		contentPane.add(btntan);
 		
+		// completed tan button
+		
+		// abs button
 		btnabs = new JButton("|x|");
 		btnabs.setBorder((Border) new BevelBorder(BevelBorder.RAISED));
 		btnabs.setForeground(new Color(255, 255, 255));
@@ -192,7 +208,10 @@ public class ScientificCalculator extends JFrame {
 		});
 		btnabs.setBounds(452, 148, 70, 36);
 		contentPane.add(btnabs);
+		//completed abs button
 		
+		
+		// mode button
 		btnmode = new JButton("%");
 		btnmode.setBorder((Border) new BevelBorder(BevelBorder.RAISED));
 		btnmode.setForeground(new Color(255, 255, 255));
@@ -210,7 +229,9 @@ public class ScientificCalculator extends JFrame {
 		});
 		btnmode.setBounds(532, 148, 70, 36);
 		contentPane.add(btnmode);
+		// completed mode button
 		
+		//sqrt button
 		btnsqrt = new JButton("sqrt");
 		btnsqrt.setForeground(new Color(255, 255, 255));
 		btnsqrt.setBorder((Border) new BevelBorder(BevelBorder.RAISED));
@@ -229,45 +250,10 @@ public class ScientificCalculator extends JFrame {
 		});
 		btnsqrt.setBounds(232, 194, 68, 36);
 		contentPane.add(btnsqrt);
+		// completed sqrt button
 		
-		btnpi_2 = new JButton("x^2");
-		btnpi_2.setBorder((Border) new BevelBorder(BevelBorder.RAISED));
-		btnpi_2.setForeground(new Color(255, 255, 255));
-		btnpi_2.setFont(new Font("Tahoma", Font.BOLD, 13));
-		btnpi_2.setBackground(new Color(128, 128, 255));
-		btnpi_2.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				if(textField.getText().isEmpty()== true)
-					 first = 0.0;
-				 else
-					 first = Double.valueOf(textField.getText());
-				res = Math.pow(first,2);
-				textField.setText(String.valueOf(res));
-				Opt ="^2";
-			}
-		});
-		btnpi_2.setBounds(310, 194, 61, 36);
-		contentPane.add(btnpi_2);
-		
-		btnE_2 = new JButton("x^3");
-		btnE_2.setBorder((Border) new BevelBorder(BevelBorder.RAISED));
-		btnE_2.setForeground(new Color(255, 255, 255));
-		btnE_2.setFont(new Font("Tahoma", Font.BOLD, 13));
-		btnE_2.setBackground(new Color(128, 128, 255));
-		btnE_2.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				if(textField.getText().isEmpty()== true)
-					 first = 0.0;
-				 else
-					 first = Double.valueOf(textField.getText());
-				res = Math.pow(first,3);
-				textField.setText(String.valueOf(res));
-				Opt ="^3";
-		    }
-		});
-		btnE_2.setBounds(381, 194, 61, 36);
-		contentPane.add(btnE_2);
-		
+	
+		// factorial button
 		btnfact = new JButton("n!");
 		btnfact.setForeground(new Color(255, 255, 255));
 		btnfact.setFont(new Font("Tahoma", Font.BOLD, 16));
@@ -293,7 +279,9 @@ public class ScientificCalculator extends JFrame {
 		});
 		btnfact.setBounds(452, 194, 70, 36);
 		contentPane.add(btnfact);
+		// completed factorial button
 		
+		//basic arithmetic operators
 		btndiv = new JButton("/");
 		btndiv.setBorder((Border) new BevelBorder(BevelBorder.RAISED));
 		btndiv.setForeground(new Color(255, 255, 255));
@@ -309,8 +297,67 @@ public class ScientificCalculator extends JFrame {
 				 Opt ="/";
 			}
 		});
+		
+		btnmul = new JButton("*");
+		btnmul.setBorder((Border) new BevelBorder(BevelBorder.RAISED));
+		btnmul.setForeground(new Color(255, 255, 255));
+		btnmul.setFont(new Font("Tahoma", Font.BOLD, 16));
+		btnmul.setBackground(new Color(128, 128, 255));
+		btnmul.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if(textField.getText().isEmpty()== true)
+					 first = 0.0;
+				 else
+					 first = Double.valueOf(textField.getText());
+				 textField.setText("");
+				 Opt ="*";
+			}
+		});
+		btnmul.setBounds(532, 240, 70, 36);
+		contentPane.add(btnmul);
+		
+		
 		btndiv.setBounds(532, 194, 70, 36);
 		contentPane.add(btndiv);
+		
+		btnmin = new JButton("-");
+		btnmin.setBorder((Border) new BevelBorder(BevelBorder.RAISED));
+		btnmin.setForeground(new Color(255, 255, 255));
+		btnmin.setFont(new Font("Tahoma", Font.BOLD, 16));
+		btnmin.setBackground(new Color(128, 128, 255));
+		btnmin.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if(textField.getText().isEmpty()== true)
+					 first = 0.0;
+				 else
+					 first = Double.valueOf(textField.getText());
+				 textField.setText("");
+				 Opt ="-";
+			}
+		});
+		btnmin.setBounds(532, 286, 70, 36);
+		contentPane.add(btnmin);
+		btnadd = new JButton("+");
+		btnadd.setBorder((Border) new BevelBorder(BevelBorder.RAISED));
+		btnadd.setForeground(new Color(255, 255, 255));
+		btnadd.setFont(new Font("Tahoma", Font.BOLD, 16));
+		btnadd.setBackground(new Color(128, 128, 255));
+		btnadd.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if(textField.getText().isEmpty()== true)
+					 first = 0.0;
+				 else
+					 first = Double.valueOf(textField.getText());
+				 textField.setText("");
+				 Opt ="+";
+			}
+		});
+		btnadd.setBounds(532, 332, 70, 36);
+		contentPane.add(btnadd);
+		
+		// completed basic arithmetic operators
+		
+		// power buttons
 		
 		btnpower = new JButton("x^y");
 		btnpower.setBorder((Border) new BevelBorder(BevelBorder.RAISED));
@@ -329,6 +376,88 @@ public class ScientificCalculator extends JFrame {
 		});
 		btnpower.setBounds(232, 240, 68, 36);
 		contentPane.add(btnpower);
+		
+		btn10pow = new JButton("10^x");
+		btn10pow.setBorder((Border) new BevelBorder(BevelBorder.RAISED));
+		btn10pow.setForeground(new Color(255, 255, 255));
+		btn10pow.setBackground(new Color(128, 128, 255));
+		btn10pow.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if(textField.getText().isEmpty()== true)
+					 first = 0.0;
+				 else
+					 first = Double.valueOf(textField.getText());
+				res = Math.pow(10, first);
+				textField.setText(String.valueOf(res));
+			}
+		});
+		btn10pow.setFont(new Font("Tahoma", Font.BOLD, 12));
+		btn10pow.setBounds(232, 286, 68, 36);
+		contentPane.add(btn10pow);
+		
+	// square button
+		
+		btnpi_2 = new JButton("x^2");
+		btnpi_2.setBorder((Border) new BevelBorder(BevelBorder.RAISED));
+		btnpi_2.setForeground(new Color(255, 255, 255));
+		btnpi_2.setFont(new Font("Tahoma", Font.BOLD, 13));
+		btnpi_2.setBackground(new Color(128, 128, 255));
+		btnpi_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if(textField.getText().isEmpty()== true)
+					 first = 0.0;
+				 else
+					 first = Double.valueOf(textField.getText());
+				res = Math.pow(first,2);
+				textField.setText(String.valueOf(res));
+				Opt ="^2";
+			}
+		});
+		btnpi_2.setBounds(310, 194, 61, 36);
+		contentPane.add(btnpi_2);
+		//completed square button
+		
+		// Cube button
+		btnE_2 = new JButton("x^3");
+		btnE_2.setBorder((Border) new BevelBorder(BevelBorder.RAISED));
+		btnE_2.setForeground(new Color(255, 255, 255));
+		btnE_2.setFont(new Font("Tahoma", Font.BOLD, 13));
+		btnE_2.setBackground(new Color(128, 128, 255));
+		btnE_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if(textField.getText().isEmpty()== true)
+					 first = 0.0;
+				 else
+					 first = Double.valueOf(textField.getText());
+				res = Math.pow(first,3);
+				textField.setText(String.valueOf(res));
+				Opt ="^3";
+		    }
+		});
+		btnE_2.setBounds(381, 194, 61, 36);
+		contentPane.add(btnE_2);
+		// completed cube button
+		btn2n = new JButton("2^n");
+		btn2n.setBorder(new BevelBorder(BevelBorder.RAISED));
+		btn2n.setForeground(new Color(255, 255, 255));
+		btn2n.setFont(new Font("Tahoma", Font.BOLD, 16));
+		btn2n.setBackground(new Color(128, 128, 255));
+		btn2n.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if(textField.getText().isEmpty()== true)
+					 first = 0.0;
+				 else
+					 first = Double.valueOf(textField.getText());
+				 first = Math.pow(2, first);
+				 textField.setText(String.valueOf(first));
+			}
+		});
+		btn2n.setBounds(232, 102, 68, 36);
+		contentPane.add(btn2n);
+		
+		// completed power buttons
+		
+		//basic number and default values
 		
 		btn7 = new JButton("7");
 		btn7.setBorder((Border) new BevelBorder(BevelBorder.RAISED));
@@ -372,42 +501,6 @@ public class ScientificCalculator extends JFrame {
 		btn9.setBounds(452, 240, 70, 36);
 		contentPane.add(btn9);
 		
-		btnmul = new JButton("*");
-		btnmul.setBorder((Border) new BevelBorder(BevelBorder.RAISED));
-		btnmul.setForeground(new Color(255, 255, 255));
-		btnmul.setFont(new Font("Tahoma", Font.BOLD, 16));
-		btnmul.setBackground(new Color(128, 128, 255));
-		btnmul.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				if(textField.getText().isEmpty()== true)
-					 first = 0.0;
-				 else
-					 first = Double.valueOf(textField.getText());
-				 textField.setText("");
-				 Opt ="*";
-			}
-		});
-		btnmul.setBounds(532, 240, 70, 36);
-		contentPane.add(btnmul);
-		
-		btn10pow = new JButton("10^x");
-		btn10pow.setBorder((Border) new BevelBorder(BevelBorder.RAISED));
-		btn10pow.setForeground(new Color(255, 255, 255));
-		btn10pow.setBackground(new Color(128, 128, 255));
-		btn10pow.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				if(textField.getText().isEmpty()== true)
-					 first = 0.0;
-				 else
-					 first = Double.valueOf(textField.getText());
-				res = Math.pow(10, first);
-				textField.setText(String.valueOf(res));
-			}
-		});
-		btn10pow.setFont(new Font("Tahoma", Font.BOLD, 12));
-		btn10pow.setBounds(232, 286, 68, 36);
-		contentPane.add(btn10pow);
-		
 		btn4 = new JButton("4");
 		btn4.setBorder((Border) new BevelBorder(BevelBorder.RAISED));
 		btn4.setForeground(new Color(255, 255, 255));
@@ -450,42 +543,8 @@ public class ScientificCalculator extends JFrame {
 		btn6.setBounds(452, 286, 70, 36);
 		contentPane.add(btn6);
 		
-		btnmin = new JButton("-");
-		btnmin.setBorder((Border) new BevelBorder(BevelBorder.RAISED));
-		btnmin.setForeground(new Color(255, 255, 255));
-		btnmin.setFont(new Font("Tahoma", Font.BOLD, 16));
-		btnmin.setBackground(new Color(128, 128, 255));
-		btnmin.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				if(textField.getText().isEmpty()== true)
-					 first = 0.0;
-				 else
-					 first = Double.valueOf(textField.getText());
-				 textField.setText("");
-				 Opt ="-";
-			}
-		});
-		btnmin.setBounds(532, 286, 70, 36);
-		contentPane.add(btnmin);
 		
-		btnlog = new JButton("log");
-		btnlog.setBorder((Border) new BevelBorder(BevelBorder.RAISED));
-		btnlog.setForeground(new Color(255, 255, 255));
-		btnlog.setFont(new Font("Tahoma", Font.BOLD, 16));
-		btnlog.setBackground(new Color(128, 128, 255));
-		btnlog.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				if(textField.getText().isEmpty()== true)
-					 first = 0.0;
-				 else
-					 first = Double.valueOf(textField.getText());
-				res = Math.log(first);
-				textField.setText(String.valueOf(res));
-				 Opt ="log";
-			}
-		});
-		btnlog.setBounds(232, 332, 68, 36);
-		contentPane.add(btnlog);
+	
 		
 		btn1 = new JButton("1");
 		btn1.setBorder((Border) new BevelBorder(BevelBorder.RAISED));
@@ -529,67 +588,6 @@ public class ScientificCalculator extends JFrame {
 		btn3.setBounds(452, 332, 70, 36);
 		contentPane.add(btn3);
 		
-		btnadd = new JButton("+");
-		btnadd.setBorder((Border) new BevelBorder(BevelBorder.RAISED));
-		btnadd.setForeground(new Color(255, 255, 255));
-		btnadd.setFont(new Font("Tahoma", Font.BOLD, 16));
-		btnadd.setBackground(new Color(128, 128, 255));
-		btnadd.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				if(textField.getText().isEmpty()== true)
-					 first = 0.0;
-				 else
-					 first = Double.valueOf(textField.getText());
-				 textField.setText("");
-				 Opt ="+";
-			}
-		});
-		btnadd.setBounds(532, 332, 70, 36);
-		contentPane.add(btnadd);
-		
-		btnln = new JButton("ln");
-		btnln.setBorder((Border) new BevelBorder(BevelBorder.RAISED));
-		btnln.setForeground(new Color(255, 255, 255));
-		btnln.setFont(new Font("Tahoma", Font.BOLD, 16));
-		btnln.setBackground(new Color(128, 128, 255));
-		btnln.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				if(textField.getText().isEmpty()== true)
-					 first = 0.0;
-				 else
-					 first = Double.valueOf(textField.getText());
-				res = Math.log10(first);
-				textField.setText(String.valueOf(res));
-				 Opt ="ln";
-			}
-		});
-		btnln.setBounds(232, 378, 68, 36);
-		contentPane.add(btnln);
-		
-		btnneg = new JButton("+/-");
-		btnneg.setBorder((Border) new BevelBorder(BevelBorder.RAISED));
-		btnneg.setForeground(new Color(255, 255, 255));
-		btnneg.setFont(new Font("Tahoma", Font.BOLD, 14));
-		btnneg.setBackground(new Color(128, 128, 255));
-		btnneg.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			     if(textField.getText().lastIndexOf("-")== -1) {
-			    	 textField.setText("-"+textField.getText());
-			     }
-			     else {
-			    	 if(textField.getText().isEmpty()== true)
-						 first = 0.0;
-					 else
-						 first = Double.valueOf(textField.getText());
-			    	 first = Math.abs(first);
-			    	 textField.setText(String.valueOf(first));
-			     }
-				 
-			}
-		});
-		btnneg.setBounds(310, 378, 61, 36);
-		contentPane.add(btnneg);
-		
 		btn0 = new JButton("0");
 		btn0.setBorder((Border) new BevelBorder(BevelBorder.RAISED));
 		btn0.setForeground(new Color(255, 255, 255));
@@ -604,42 +602,6 @@ public class ScientificCalculator extends JFrame {
 		btn0.setBounds(381, 378, 61, 36);
 		contentPane.add(btn0);
 		
-		btnflot = new JButton(".");
-		btnflot.setBorder((Border) new BevelBorder(BevelBorder.RAISED));
-		btnflot.setForeground(new Color(255, 255, 255));
-		btnflot.setFont(new Font("Tahoma", Font.BOLD, 16));
-		btnflot.setBackground(new Color(128, 128, 255));
-		btnflot.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				if(textField.getText().lastIndexOf(".")== -1) {
-					textField.setText(textField.getText()+".");
-				}
-				else {
-				 textField.setText(textField.getText());
-				}
-			}
-		});
-		btnflot.setBounds(452, 378, 70, 36);
-		contentPane.add(btnflot);
-		
-		
-		btn2n = new JButton("2^n");
-		btn2n.setBorder(new BevelBorder(BevelBorder.RAISED));
-		btn2n.setForeground(new Color(255, 255, 255));
-		btn2n.setFont(new Font("Tahoma", Font.BOLD, 16));
-		btn2n.setBackground(new Color(128, 128, 255));
-		btn2n.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				if(textField.getText().isEmpty()== true)
-					 first = 0.0;
-				 else
-					 first = Double.valueOf(textField.getText());
-				 first = Math.pow(2, first);
-				 textField.setText(String.valueOf(first));
-			}
-		});
-		btn2n.setBounds(232, 102, 68, 36);
-		contentPane.add(btn2n);
 		
 		btnpi = new JButton("pi");
 		btnpi.setBorder((Border) new BevelBorder(BevelBorder.RAISED));
@@ -667,6 +629,99 @@ public class ScientificCalculator extends JFrame {
 		btnE.setBounds(381, 102, 61, 36);
 		contentPane.add(btnE);
 		
+		// completed basic numbers and default values
+		
+		// Logarithm with base 10 and e
+		btnlog = new JButton("log");
+		btnlog.setBorder((Border) new BevelBorder(BevelBorder.RAISED));
+		btnlog.setForeground(new Color(255, 255, 255));
+		btnlog.setFont(new Font("Tahoma", Font.BOLD, 16));
+		btnlog.setBackground(new Color(128, 128, 255));
+		btnlog.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if(textField.getText().isEmpty()== true)
+					 first = 0.0;
+				 else
+					 first = Double.valueOf(textField.getText());
+				res = Math.log(first);
+				textField.setText(String.valueOf(res));
+				 Opt ="log";
+			}
+		});
+		btnlog.setBounds(232, 332, 68, 36);
+		contentPane.add(btnlog);
+		
+		btnln = new JButton("ln");
+		btnln.setBorder((Border) new BevelBorder(BevelBorder.RAISED));
+		btnln.setForeground(new Color(255, 255, 255));
+		btnln.setFont(new Font("Tahoma", Font.BOLD, 16));
+		btnln.setBackground(new Color(128, 128, 255));
+		btnln.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if(textField.getText().isEmpty()== true)
+					 first = 0.0;
+				 else
+					 first = Double.valueOf(textField.getText());
+				res = Math.log10(first);
+				textField.setText(String.valueOf(res));
+				 Opt ="ln";
+			}
+		});
+		btnln.setBounds(232, 378, 68, 36);
+		contentPane.add(btnln);
+		
+		
+		// completed Logarithm
+		
+		// sign change and float values
+		btnneg = new JButton("+/-");
+		btnneg.setBorder((Border) new BevelBorder(BevelBorder.RAISED));
+		btnneg.setForeground(new Color(255, 255, 255));
+		btnneg.setFont(new Font("Tahoma", Font.BOLD, 14));
+		btnneg.setBackground(new Color(128, 128, 255));
+		btnneg.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			     if(textField.getText().lastIndexOf("-")== -1) {
+			    	 textField.setText("-"+textField.getText());
+			     }
+			     else {
+			    	 if(textField.getText().isEmpty()== true)
+						 first = 0.0;
+					 else
+						 first = Double.valueOf(textField.getText());
+			    	 first = Math.abs(first);
+			    	 textField.setText(String.valueOf(first));
+			     }
+				 
+			}
+		});
+		btnneg.setBounds(310, 378, 61, 36);
+		contentPane.add(btnneg);
+		
+		
+		
+		btnflot = new JButton(".");
+		btnflot.setBorder((Border) new BevelBorder(BevelBorder.RAISED));
+		btnflot.setForeground(new Color(255, 255, 255));
+		btnflot.setFont(new Font("Tahoma", Font.BOLD, 16));
+		btnflot.setBackground(new Color(128, 128, 255));
+		btnflot.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if(textField.getText().lastIndexOf(".")== -1) {
+					textField.setText(textField.getText()+".");
+				}
+				else {
+				 textField.setText(textField.getText());
+				}
+			}
+		});
+		btnflot.setBounds(452, 378, 70, 36);
+		contentPane.add(btnflot);
+		
+		
+		// completed sign change and float
+		
+		// clear the result 
 		btnce = new JButton("CE");
 		btnce.setBorder((Border) new BevelBorder(BevelBorder.RAISED));
 		btnce.setForeground(new Color(255, 255, 255));
@@ -681,7 +736,10 @@ public class ScientificCalculator extends JFrame {
 		});
 		btnce.setBounds(452, 102, 70, 36);
 		contentPane.add(btnce);
+		// completed clear
 		
+		
+		// undo mistake
 		btnx = new JButton("x");
 		btnx.setBorder((Border) new BevelBorder(BevelBorder.RAISED));
 		btnx.setForeground(new Color(255, 255, 255));
@@ -696,7 +754,7 @@ public class ScientificCalculator extends JFrame {
 				}
 				else {
 					
-					if(Double.valueOf(textField.getText()).isNaN()== false) {
+					if(Double.valueOf(textField.getText()).isNaN()== true) {
 						first = 0;
 						textField.setText("0");
 					}
@@ -714,6 +772,9 @@ public class ScientificCalculator extends JFrame {
 		
 		btnx.setBounds(532, 102, 70, 36);
 		contentPane.add(btnx);
+		// completed undo mistake section
+		
+		// answer of calculation
 		
 		btneq = new JButton("=");
 		btneq.setBorder((Border) new BevelBorder(BevelBorder.RAISED));
@@ -816,5 +877,9 @@ public class ScientificCalculator extends JFrame {
 		});
 		btneq.setBounds(532, 378, 70, 36);
 		contentPane.add(btneq);
+		//completed answer of calculation
+		
+		
+		// completed the code
 	}
 }
