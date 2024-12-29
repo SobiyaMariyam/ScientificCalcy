@@ -26,3 +26,5 @@ Follow these steps to run the Scientific Calculator on your local machine:
 - Java Development Kit (JDK) installed (version 8 or later).
 - A Java IDE (e.g., IntelliJ IDEA, Eclipse, NetBeans) or command-line tools.
 
+  ### output
+  ![image](https://github.com/user-attachments/assets/b0e9fb7b-d155-4961-b6aa-5d054b8fb691)
